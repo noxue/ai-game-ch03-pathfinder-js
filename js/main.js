@@ -1,12 +1,13 @@
 window.onload = function () {
 	start()
 }
-
-function start(){
+var timer = null
+function start() {
+	if (timer) clearInterval(timer)
 	var canvas = document.getElementById('canvas');
 	var ctx = canvas.getContext('2d');
 	run()
-	var timer = setInterval(() => {
+	timer = setInterval(() => {
 		epoch()
 		// 清空
 		ctx.clearRect(0, 0, 500, 500)
