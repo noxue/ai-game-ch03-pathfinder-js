@@ -16,5 +16,5 @@ function start(){
 			clearInterval(timer)
 		}
 		console.log(generation)
-	}, 1000 / 120)
+	}, 1)
 }
